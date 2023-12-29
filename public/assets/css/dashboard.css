@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html, body {
+    height:100vh;
+} */
+
+/* body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+} */
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/logo.png');
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(2px);
+    background-color: #ffffff;
+    z-index: -1; 
+}
+
+.product {
+    color: #90a2aa;
+    height: 90vh;
+    text-align: justify;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-kategori h2 {
+    text-align: center;
+    flex-direction: row;
+    font-family: 'poppins', sans-serif;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.kategori {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.kategori img {
+    width: 70%;
+    margin: 20px;
+    margin-bottom: 30px;
+    background-color:transparent;
+    transition: background-color 0.3s, border-radius 0; 
+}
+
+.kategori img:hover{
+    background-color:#6da4c0a8;
+    border-radius: 25px;
+    box-shadow: 0 0 5px #00000030,
+    0 0 25px #00000030,
+    0 0 50px #00000030,
+    0 0 100px #00000030;
+}
+
+.view-more {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-more a {
+    position: relative;
+    font-size: 30px;
+    text-decoration: none;
+    font-family:  'Montserrat', sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px #6da5c0;
+}
+
+.view-more a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 2px solid var(--clr);
+    -webkit-text-stroke: 1px var(--clr);
+}
+
+.view-more a:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+    text-shadow: 0 0 5px #00000068,
+                0 0 25px #00000068,
+                0 0 50px #00000068,
+                0 0 100px #00000068;
+}

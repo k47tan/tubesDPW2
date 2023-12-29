@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Start header */
+nav {
+    display: grid;
+    align-content: center;
+    grid-template-columns: 100px 20% 50% auto;
+    background-color: #05161a;
+    gap: 5px;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    top: 0; 
+}
+
+/* Start navbar logo */
+.navbarLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+.navbarLogo img {
+    width: 60px;
+}
+
+.navbarText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Pangolin', cursive;
+    font-size: 30px;
+    color: #6da5c0;
+    margin: 0;
+    padding-left: 10px;
+}
+
+
+.navbarText h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #115c66;
+    margin: 0; 
+}
+
+/* End navbar logo */
+
+/* Start navbar searchBox */
+nav .searchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 50px;
+    background-color: rgb(215, 225, 234);
+}
+
+.searchBox input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* End navbar searchBox */
+
+
+
+.dropdown {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 30px;
+        font-size: 30px;
+        position: relative;
+    }
+
+    .dropdown a {
+        text-decoration: none; /* Menghilangkan underline pada link */
+        color: black; /* Memberi warna pada link */
+        padding: 8px 10px; 
+        color: #6da5c0;
+        display: flex;
+        align-items: center;
+    }
+
+    .dropdown-content {
+        display: none;
+        font-size: 10px;
+        position: absolute;
+        background-color: #6da5c0;
+        border-radius: 0 0 20px 20px;
+        width: 150px; /* Mengubah lebar dropdown content (misalnya, width: 200px;) */
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        top: 43px; /* Mengatur posisi dropdown content agar berada di bawah class dropdown */
+        right: 9px; /* Mengatur posisi dropdown content agar berada di ujung kanan class dropdown */
+    }
+    
+    
+    .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: flex;
+        text-align: start;
+        padding-right: 5px;
+    }
+
+    .dropdown-content i {
+        margin-left: 7px;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        border-radius: 0 0 20px 20px ;
+        border: 1px solid black;
+    }
+
+    /* Mengatur tampilan dropdown content saat class dropdown di-hover atau diklik */
+    div.dropdown:hover .dropdown-content,
+    div.dropdown:focus .dropdown-content {
+        display: block;
+        flex-direction: column;
+        margin: 0;
+        animation: animations 0.8s forwards;
+    }
+
+@keyframes animations {
+    from {top: 60%;}
+    to {top: 70%;}
+}
+
+/* End header */
